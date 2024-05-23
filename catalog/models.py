@@ -29,9 +29,9 @@ class Product(models.Model):
     description = models.TextField(
         blank=True, null=True, verbose_name="Описание", help_text="Опишите продукт"
     )
-    manufactured_at = models.DateField(
-        blank=True, null=True, verbose_name="Дата производства", help_text="Введите дату производства"
-    )
+    # manufactured_at = models.DateField(
+    #     blank=True, null=True, verbose_name="Дата производства", help_text="Введите дату производства"
+    # )
     image = models.ImageField(
         upload_to="photo", blank=True, null=True, verbose_name="Загрузите фото продукта"
     )
