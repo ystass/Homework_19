@@ -3,7 +3,7 @@
     "model": "catalog.category",
     "pk": 1,
     "fields": {
-      "name": "С„СЂСѓРєС‚С‹",
+      "name": "фрукты",
       "description": ""
     }
   },
@@ -11,42 +11,16 @@
     "model": "catalog.category",
     "pk": 2,
     "fields": {
-      "name": "РѕРІРѕС‰Рё",
-      "description": "СЃРІРµР¶РёРµ,СЃРѕРІС…РѕР· Р›СѓС‡"
+      "name": "овощи",
+      "description": "свежие,совхоз Луч"
     }
   },
   {
     "model": "catalog.category",
     "pk": 3,
     "fields": {
-      "name": "СЃРѕРєРё",
-      "description": "СЃРІРµР¶РѕРІС‹Р¶Р°С‚С‹Рµ"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 1,
-    "fields": {
-      "name": "СЏР±Р»РѕРєРѕ",
-      "description": "РєСЂР°СЃРЅРѕРµ СЃР»Р°РґРєРѕРµ",
-      "image": "",
-      "category": 1,
-      "price": 50.5,
-      "created_at": "2024-05-15",
-      "updated_at": "2024-05-17"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 2,
-    "fields": {
-      "name": "РіСЂСѓС€Р°",
-      "description": "С„РѕСЂРµР»СЊ",
-      "image": "",
-      "category": 1,
-      "price": 75.25,
-      "created_at": "2024-05-01",
-      "updated_at": "2024-05-22"
+      "name": "соки",
+      "description": "свежовыжатые"
     }
   }
 ]
