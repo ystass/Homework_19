@@ -19,4 +19,4 @@ from catalog.models import Product
 def product(request):
     products = Product.objects.all()
     context = {'products': products}
-    return render(request, 'products.html', context)
+    return render(request, 'product_list.html', context)
