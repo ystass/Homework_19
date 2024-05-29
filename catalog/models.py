@@ -50,10 +50,12 @@ class Product(models.Model):
         blank=True, null=True, verbose_name="Дата последнего изменения (записи в БД)"
     )
 
+    def __str__(self):
+        return f"{self.name} {self.price}"
+
     class Meta:
         verbose_name = "Продукт"
         verbose_name_plural = "Продукты"
         ordering = ["name", "price", "created_at", "updated_at"]
 
-    def __str__(self):
-        return f"{self.name} {self.price}"
+
