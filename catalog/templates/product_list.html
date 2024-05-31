@@ -7,7 +7,7 @@
         {% for product in products %}
         <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ product.photo | media_filter }}">
+            <img src="{{ product.image | media_filter }}">
             <div class="card-body">
               <p class="card-text">{{ product.name | title }}</p>
               <p class="card-text">Категория:  {{ product.category|title }}</p>
