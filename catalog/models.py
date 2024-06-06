@@ -49,6 +49,7 @@ class Product(models.Model):
     updated_at = models.DateField(
         blank=True, null=True, verbose_name="Дата последнего изменения (записи в БД)"
     )
+    in_stock = models.BooleanField(default=True)
 
     def __str__(self):
         return f"{self.name} {self.price}"
