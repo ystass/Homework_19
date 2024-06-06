@@ -1,38 +1,39 @@
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
-
+from django.shortcuts import get_object_or_404, redirect
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from catalog.models import Product
 
 
-# def home(request):
-#     return render(request, 'home.html')
-
-
-# def contacts(request):
-#     if request.method == 'POST':
-#         name = request.POST.get('name')
-#         phone = request.POST.get('phone')
-#         message = request.POST.get('message')
-#         print(f'{name} ({phone}): {message}')
-#     return render(request, 'contacts.html')
 class ProductListView(ListView):
     model = Product
 
 
-
-
-# def product(request):
-#     products = Product.objects.all()
-#     context = {'products': products}
-#     return render(request, 'product_list.html', context)
-
-
 class ProductDetailView(DetailView):
     model = Product
-    #
 
 
-# def one_product(request, pk):
-#     product_one = get_object_or_404(Product, pk=pk)#Product.objects.get(pk=pk)
-#     context = {'product': product_one}
-#     return render(request, 'product_detail.html', context)
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('name', 'category', 'description', 'image', 'price', 'created_at', 'updated_at')
+    success_url = reverse_lazy('catalog:product')
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = ('name', 'category', 'description', 'image', 'price', 'created_at', 'updated_at')
+    success_url = reverse_lazy('catalog:product')
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:product')
+
+
+def toggle_in_stock(request, pk):
+    product_item = get_object_or_404(Product, pk=pk)
+    if product_item.in_stock:
+        product_item.in_stock = False
+    else:
+        product_item.in_stock = True
+    product_item.save()
+    return redirect(reverse('catalog:product'))
