@@ -1,5 +1,5 @@
 {% extends 'blog/base.html' %}
-{% load my_tags %}
+
 {% block content %}
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
@@ -15,9 +15,9 @@
               <p class="card-text">Количество просмотров:  {{ article.number_views }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a class="btn btn-primary" href="{% url 'blog:view' article.pk %}" role="button">Посмотреть</a>
-                  <a class="btn btn-primary" href="{% url 'blog:edit' article.pk %}" role="button">Редактировать</a>
-                  <a class="btn btn-primary" href="{% url 'blog:delete' article.pk %}" role="button">Удалить</a>
+                  <a class="btn btn-primary" href="{% url 'blog:blog_detail' article.pk %}" role="button">Посмотреть</a>
+                  <a class="btn btn-primary" href="{% url 'blog:blog_update' article.pk %}" role="button">Редактировать</a>
+                  <a class="btn btn-primary" href="{% url 'blog:blog_delete' article.pk %}" role="button">Удалить</a>
                 </div>
                 <small class="text-body-secondary">9 mins</small>
               </div>
