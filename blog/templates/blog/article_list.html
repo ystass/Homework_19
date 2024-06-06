@@ -4,7 +4,7 @@
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for product in object_list %}
+        {% for article in object_list %}
         <div class="col">
           <div class="card shadow-sm">
             <img src="{{ article.preview | media_filter }}">
@@ -14,12 +14,11 @@
               <p class="card-text">Дата создания: {{ article.created_at }}</p>
               <p class="card-text">Количество просмотров:  {{ article.number_views }}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+                <div class="btn">
                   <a class="btn btn-primary" href="{% url 'blog:blog_detail' article.pk %}" role="button">Посмотреть</a>
-                  <a class="btn btn-primary" href="{% url 'blog:blog_update' article.pk %}" role="button">Редактировать</a>
-                  <a class="btn btn-primary" href="{% url 'blog:blog_delete' article.pk %}" role="button">Удалить</a>
+                  <a class="btn btn-success" href="{% url 'blog:blog_update' article.pk %}" role="button">Редактировать</a>
+                  <a class="btn btn-danger" href="{% url 'blog:blog_delete' article.pk %}" role="button">Удалить</a>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
               </div>
             </div>
           </div>
