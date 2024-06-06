@@ -8,7 +8,7 @@
           <div class="card shadow-sm">
             <img src="{{ product.image | media_filter }}">
             <div class="card-body">
-              <p class="card-text">{{ article.title | title }}</p>
+              <p class="card-text">{{ article.title | title }} ({{ article.slug}})</p>
               <p class="card-text">Содержимое статьи:  {{ article.content | title }}</p>
               <p class="card-text">Дата создания: {{ article.created_at }}</p>
               <p class="card-text">Количество просмотров:  {{ article.number_views }}</p>
