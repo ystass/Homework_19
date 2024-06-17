@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+
+from catalog.forms import ProductForm
 from catalog.models import Product
 
 
@@ -14,13 +16,13 @@ class ProductDetailView(DetailView):
 
 class ProductCreateView(CreateView):
     model = Product
-    fields = ('name', 'category', 'description', 'image', 'price', 'created_at', 'updated_at')
+    form_class = ProductForm
     success_url = reverse_lazy('catalog:product')
 
 
 class ProductUpdateView(UpdateView):
     model = Product
-    fields = ('name', 'category', 'description', 'image', 'price', 'created_at', 'updated_at')
+    form_class = ProductForm
     success_url = reverse_lazy('catalog:product')
 
 
