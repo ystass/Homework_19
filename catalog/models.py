@@ -60,3 +60,12 @@ class Product(models.Model):
         ordering = ["name", "price", "created_at", "updated_at"]
 
 
+class Version(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт', related_name='prod')
+    version_number = models.IntegerField(verbose_name="номер версии")
+    name = models.CharField(verbose_name="название версии")
+    is_active = models.BooleanField(verbose_name="активная версия")
+
+    class Meta:
+        verbose_name = 'версия'
+        verbose_name_plural = 'версии'
