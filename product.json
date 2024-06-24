@@ -9,7 +9,8 @@
       "category": 1,
       "price": 50.5,
       "created_at": "2024-05-15",
-      "updated_at": "2024-05-17"
+      "updated_at": "2024-05-17",
+      "in_stock": false
     }
   },
   {
@@ -22,7 +23,50 @@
       "category": 1,
       "price": 75.25,
       "created_at": "2024-05-01",
-      "updated_at": "2024-05-22"
+      "updated_at": "2024-05-22",
+      "in_stock": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Хризантемы",
+      "description": "Свежий срез",
+      "image": "photo/_wqyl681rZo.jpg",
+      "category": 4,
+      "price": 100.0,
+      "created_at": "2024-05-28",
+      "updated_at": "2024-05-28",
+      "in_stock": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Фиалки",
+      "description": "Развитая корневая система. Горшечный цветок",
+      "image": "photo/6HdKc0Nj_js.jpg",
+      "category": 4,
+      "price": 150.0,
+      "created_at": "2024-05-31",
+      "updated_at": "2024-05-31",
+      "in_stock": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "лимон",
+      "description": "крупные, марокко",
+      "image": "photo/rXkMR8Vz6sc.jpg",
+      "category": 1,
+      "price": 450.0,
+      "created_at": "2024-06-06",
+      "updated_at": null,
+      "in_stock": false
     }
   }
 ]

@@ -22,5 +22,13 @@
       "name": "соки",
       "description": "свежовыжатые"
     }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Цветы",
+      "description": "Горшечные, на срез и дрю"
+    }
   }
 ]
