@@ -7,18 +7,14 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header">
-                    {% if object %}
-                        <h5 class="card-title">Редактирование профиля</h5>
-                    {% else %}
                     <h3 class="card-title">
-                        Регистрация
+                        Профиль
                     </h3>
-                    {% endif %}
                 </div>
                 <div class="card-body">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
 
                 </div>
             </div>
