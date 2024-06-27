@@ -23,7 +23,7 @@ class UserCreateView(CreateView):
         user.token = token
         user.save()
         host = self.request.get_host()
-        url = f'http://{host}/users/email.confirm/{token}/'
+        url = f'http://{host}/users/email-confirm/{token}/'
         send_mail(
             subject='Подтверждение почты',
             message=f'Здравствуйте. Перейдите по ссылки для подтверждения почты {url}',
