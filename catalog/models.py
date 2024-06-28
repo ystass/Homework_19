@@ -1,5 +1,7 @@
 from django.db import models
 
+from users.models import User
+
 
 class Category(models.Model):
     name = models.CharField(
@@ -50,6 +52,9 @@ class Product(models.Model):
         blank=True, null=True, verbose_name="Дата последнего изменения (записи в БД)"
     )
     in_stock = models.BooleanField(default=True)
+    owner = models.ForeignKey(User,
+                              verbose_name="Владелец", blank=True, null=True, on_delete=models.SET_NULL
+                              )
 
     def __str__(self):
         return f"{self.name} {self.price}"
