@@ -1,0 +1,111 @@
+[
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$2KjpY4xdhHyimwTURgzpD3$2TBMueZJUuqnJkhPCFl/qu+/6YHVXAOhYHF5fCxBqgs=",
+      "last_login": "2024-07-01T13:31:56.995Z",
+      "is_superuser": true,
+      "first_name": "admin",
+      "last_name": "admin",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-06-24T08:46:30.595Z",
+      "email": "admin@admin.com",
+      "avatar": "",
+      "phone": "+7(965)489-98-65",
+      "country": "��",
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$XChL0nLDA0jsGwdMQD0HZn$20xqGjvRD2bnJ+RLdkmbqEvt4f+w7slpMBk5GpKT3JM=",
+      "last_login": "2024-07-01T13:30:02.224Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-25T06:48:06Z",
+      "email": "test@mail.ru",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "token": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$iB2ClgeQpyy51vkbc7hq1H$DERc2x2RkNGRd4T9M/jESmt/7p4H5W8NgoMgot86qPI=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-27T06:46:55.604Z",
+      "email": "stepanischevyy@mail.ru",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "token": "3a0d86b5589ceeb64c8d31af994cd16e",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 19,
+    "fields": {
+      "password": "qwerty",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-28T07:56:54Z",
+      "email": "stepanischevyy@yandex.ru",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$2G2PZ7Mm8KFZzN9V9v9ILc$Ubp6BB3Czizwn7ijQUOMud7X7orpde+5Qj+H/7SgTRU=",
+      "last_login": "2024-07-01T13:32:24.323Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-01T13:18:04Z",
+      "email": "123gwe@mail.ru",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "token": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  }
+]
