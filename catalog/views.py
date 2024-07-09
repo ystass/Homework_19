@@ -6,7 +6,8 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from catalog.forms import ProductForm, VersionForm, ProductModeratorForm
-from catalog.models import Product, Version
+from catalog.models import Product, Version, Category
+from catalog.services import get_categories_from_cache, get_products_from_cache
 
 
 class ProductListView(ListView):
@@ -27,6 +28,9 @@ class ProductListView(ListView):
 
         context_data['object_list'] = list_product
         return context_data
+
+    def get_queryset(self):
+        return get_products_from_cache()
 
 
 class ProductDetailView(DetailView):
@@ -91,6 +95,7 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
             return ProductModeratorForm
         raise PermissionDenied
 
+
 class ProductDeleteView(DeleteView, LoginRequiredMixin):
     model = Product
     success_url = reverse_lazy('catalog:product')
@@ -104,3 +109,10 @@ def toggle_in_stock(request, pk):
         product_item.in_stock = True
     product_item.save()
     return redirect(reverse('catalog:product'))
+
+
+class CategoryListView(ListView):
+    model = Category
+
+    def get_queryset(self):
+        return get_categories_from_cache()
